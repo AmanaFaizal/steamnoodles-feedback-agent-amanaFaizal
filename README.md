@@ -42,15 +42,15 @@ The system leverages **LangChain + ChatGroq (Llama3-70B)** with Python libraries
 ---
 
 ## 🛠 Tools & Technologies
-| Component        | Logo | Description |
-|-----------------|------|-------------|
-| **LangChain**    | <img src="https://raw.githubusercontent.com/hwchase17/langchain/master/docs/static/img/langchain_logo.png" height="25"/> | Framework for building LLM-powered apps |
-| **ChatGroq**     | <img src="https://groq.com/wp-content/uploads/2023/08/groq-logo.svg" height="25"/> | LLM provider (Llama3-70B) |
-| **pandas**       | <img src="https://pandas.pydata.org/static/img/pandas_white.svg" height="25"/> | Data manipulation |
-| **matplotlib**   | <img src="https://matplotlib.org/_static/images/logo2.svg" height="25"/> | Data visualization |
-| **seaborn**      | <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" height="25"/> | Statistical plotting |
-| **dateparser**   | 📅 | Natural language date parsing |
-| **python-dotenv**| 📄 | Environment variable management |
+| Component        | Description |
+|----------------- |-------------|
+| **LangChain**    | Framework for building LLM-powered apps |
+| **ChatGroq**     | LLM provider (Llama3-70B) |
+| **pandas**       | Data manipulation |
+| **matplotlib**   | Data visualization |
+| **seaborn**      | Statistical plotting |
+| **dateparser**   | Natural language date parsing |
+| **python-dotenv**| Environment variable management |
 
 ---
 
