@@ -1,5 +1,5 @@
 <h1 align="center">🍜  Automated Restaurant Feedback Agent – SteamNoodles 🍜</h1>
-<h3 align="center">by Fathima Amana | University of Moratuwa</h3>
+<h3 align="center">Fathima Amana | University of Moratuwa | Intake 23 </h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.9+-blue?logo=python" />
