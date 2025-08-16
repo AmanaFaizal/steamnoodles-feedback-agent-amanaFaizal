@@ -1,1 +1,1 @@
-This folder contains testing Jupyter notebooks.
+This folder contains Jupyter notebook used in testing
