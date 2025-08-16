@@ -1,1 +1,1 @@
-This folder contains Jupyter notebook used in testing
+This folder contains Jupyter notebook I used
