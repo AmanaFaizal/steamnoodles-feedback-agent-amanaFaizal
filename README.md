@@ -12,8 +12,8 @@
 1. [Project Overview](#-project-overview)  
 2. [Features](#-features)  
 3. [Tools & Technologies](#-tools--technologies)  
-4. [⚙️ Setup & Usage](#️-setup--usage)
-5. [📊 Output Examples](#-output-examples)
+4. [Setup & Usage](#️-setup--usage)
+5. [Output Examples](#-output-examples)
 
 ---
 
