@@ -10,10 +10,11 @@
 
 ## 📑 Table of Contents
 1. [Project Overview](#-project-overview)  
-2. [Features](#-features)  
-3. [Tools & Technologies](#-tools--technologies)  
-4. [Setup & Usage](#️-setup--usage)
-5. [Output Examples](#-output-examples)
+2. [Features](#-features)
+3. [Summary of Approach](#-summary-of-approach)
+4. [Tools & Technologies](#-tools--technologies)  
+5. [Setup & Usage](#️-setup--usage)
+6. [Output Examples](#-output-examples)
 
 ---
 
@@ -38,6 +39,31 @@ The system leverages **LangChain + ChatGroq (Llama3-70B)** with Python libraries
 - **Flexible date-based filtering** with natural language inputs.  
 - **Interactive and exportable plots** via matplotlib and seaborn.  
 - **CSV-based data source** for easy integration and updates.  
+
+---
+## 📝 Summary of Approach  
+
+1. **Data Preparation**  
+   - Collected customer review data in CSV format (`reviews.csv`) with fields: `date`, `review`, and `sentiment`.  
+   - Pre-processed the dataset to ensure date formatting and sentiment labeling (Positive, Negative, Neutral).  
+
+2. **Feedback Agent**  
+   - Implemented using **LangChain + Groq LLM API**.  
+   - Takes a review as input → classifies its sentiment → generates a short feedback summary.  
+   - Ensures outputs are consistent by using structured prompts.  
+
+3. **Visualization Agent**  
+   - Processes the dataset of reviews and sentiment labels.  
+   - Generates time-based sentiment distribution plots using **Matplotlib**.   
+
+4. **Integration & Testing**  
+   - Both agents were tested on sample reviews from the dataset.  
+   - Verified correctness by checking auto-generated feedback and matching it against expected sentiment.  
+   - Output plots were validated against sample date ranges.  
+
+5. **Results**  
+   - Accurate sentiment classification with meaningful feedback summaries.  
+   - Visual plots clearly illustrate sentiment trends over time.  
 
 ---
 
