@@ -97,10 +97,12 @@ pip install -r requirements.txt
 ```
 
 ### 2️⃣ Configuration
-Create a .env file in the root directory:
+- Ensure a `.env` file exists in the root directory.
+- Add your Groq API key in the `.env` file:
 ```bash
 GROQ_API_KEY=your_api_key_here
 ```
+
 ### 3️⃣ Usage
 Place your dataset in: data/reviews.csv
 (must include date, review, and sentiment columns).
