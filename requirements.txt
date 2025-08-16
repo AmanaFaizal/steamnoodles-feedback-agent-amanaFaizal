@@ -1,0 +1,10 @@
+openai
+langchain
+langchain-core
+langchain-community
+langchain-groq
+pandas
+matplotlib
+seaborn
+python-dotenv
+dateparser
