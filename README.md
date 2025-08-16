@@ -41,29 +41,37 @@ The system leverages **LangChain + ChatGroq (Llama3-70B)** with Python libraries
 - **CSV-based data source** for easy integration and updates.  
 
 ---
+
 ## 📝 Summary of Approach  
 
-1. **Data Preparation**  
-   - Collected customer review data in CSV format (`reviews.csv`) with fields: `date`, `review`, and `sentiment`.  
-   - Pre-processed the dataset to ensure date formatting and sentiment labeling (Positive, Negative, Neutral).  
+### Data Preparation
+- Customer feedback is stored in a CSV file (`reviews.csv`) with columns: `date`, `review`, and `sentiment`.
+- Preprocessing ensures dates are in the correct format and sentiment labels are standardized (`Positive`, `Negative`, `Neutral`).
 
-2. **Feedback Agent**  
-   - Implemented using **LangChain + Groq LLM API**.  
-   - Takes a review as input → classifies its sentiment → generates a short feedback summary.  
-   - Ensures outputs are consistent by using structured prompts.  
+### Feedback Response Agent
+- **Input:** A customer review.
+- **Process:**  
+  - Sentiment detection using the LLM (`detect_sentiment()` function).  
+  - Generates a short, polite, professional reply via `generate_reply()`.
+- **Output:** Auto-generated feedback response.
+- Logs the review, sentiment, and timestamp to the CSV.
 
-3. **Visualization Agent**  
-   - Processes the dataset of reviews and sentiment labels.  
-   - Generates time-based sentiment distribution plots using **Matplotlib**.   
+### Sentiment Visualization Agent
+- **Input:** A natural language date range (e.g., “last 7 days”, “2025-08-01 to 2025-08-10”).
+- **Process:**  
+  - Parses the date range using `dateparser`.  
+  - Filters the CSV data for the selected period.  
+  - Aggregates daily counts of positive, negative, and neutral reviews.  
+  - Generates a bar plot showing sentiment trends (`SentimentPlotter`).
+- **Output:** Saved plot image illustrating trends over time.
 
-4. **Integration & Testing**  
-   - Both agents were tested on sample reviews from the dataset.  
-   - Verified correctness by checking auto-generated feedback and matching it against expected sentiment.  
-   - Output plots were validated against sample date ranges.  
+### Integration with LangChain
+- Both agents are wrapped as `Tool`s in LangChain: `SentimentDetector`, `ReplyGenerator`, and `SentimentPlotter`.
+- `initialize_agent()` combines these tools into a single interactive agent, capable of reasoning about which tool to use based on user input.
 
-5. **Results**  
-   - Accurate sentiment classification with meaningful feedback summaries.  
-   - Visual plots clearly illustrate sentiment trends over time.  
+### Testing & Validation
+- Sample reviews and date ranges are used to test sentiment detection, auto-reply generation, and plot visualization.
+- Output is verified against expected sentiment and correctness of plots.
 
 ---
 
@@ -74,7 +82,6 @@ The system leverages **LangChain + ChatGroq (Llama3-70B)** with Python libraries
 | **ChatGroq**     | LLM provider (Llama3-70B) |
 | **pandas**       | Data manipulation |
 | **matplotlib**   | Data visualization |
-| **seaborn**      | Statistical plotting |
 | **dateparser**   | Natural language date parsing |
 | **python-dotenv**| Environment variable management |
 
